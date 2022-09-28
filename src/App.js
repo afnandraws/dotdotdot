@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Login from "./components/Login/Login";
+import TextEditor from "./components/TextEditor/TextEditor";
 
 function App() {
+  if (navigator.onLine) {
+    console.log("online");
+  } else {
+    console.log("offline");
+  }
+  const [loggedIn, setLoggedIn] = useState(false); //will be changed to appwide redux state
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {loggedIn && <TextEditor />}
+      {!loggedIn && <Login onLogin={setLoggedIn} />}
     </div>
   );
 }

@@ -1,0 +1,8 @@
+.login form {
+    margin: 25%;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 14px;
+    background-color: rgb(227, 157, 157);
+}
