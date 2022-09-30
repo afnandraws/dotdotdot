@@ -1,6 +1,14 @@
 does login in need to be in redux
 
+<<<<<<< HEAD
 npm add electron electron-is-dev
 npm add concurrently wait-on -D
 
 npm run dev
+=======
+
+npm add electron electron-is-dev
+npm add concurrently wait-on -D
+
+npm run dev
+>>>>>>> eb8cf6501b0fcdf5502a93ad3df2f7ee6c4bf6e4
