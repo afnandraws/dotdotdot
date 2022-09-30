@@ -18,7 +18,6 @@ const TextEditor = () => {
     <div>
       <Toolkit />
       <h1
-        data-gramm="false"
         className={classes.title}
         suppressContentEditableWarning="true"
         contentEditable="true"
