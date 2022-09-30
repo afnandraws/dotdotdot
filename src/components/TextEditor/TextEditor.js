@@ -18,6 +18,9 @@ const TextEditor = () => {
     <div>
       <Toolkit />
       <h1
+        data-gramm="false"
+        data-gramm_editor="false"
+        data-enable-grammarly="false"
         className={classes.title}
         suppressContentEditableWarning="true"
         contentEditable="true"
@@ -28,6 +31,9 @@ const TextEditor = () => {
         Enter Title here..
       </h1>
       <span
+        data-gramm="false"
+        data-gramm_editor="false"
+        data-enable-grammarly="false"
         className={classes.document}
         data-text="Enter text here"
         type="textarea"
