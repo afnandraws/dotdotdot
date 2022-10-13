@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import classes from "./TextEditor.module.css";
+import styles from "./TextEditor.module.css";
 import Toolkit from "./Toolkit/Toolkit";
 
 const TextEditor = () => {
@@ -17,24 +17,22 @@ const TextEditor = () => {
   return (
     <div>
       <Toolkit />
-      <h1
+      <div
         data-gramm="false"
         data-gramm_editor="false"
         data-enable-grammarly="false"
-        className={classes.title}
+        className={styles.title}
         suppressContentEditableWarning="true"
         contentEditable="true"
         onKeyPress={(e) => {
           e.key === "Enter" && e.preventDefault();
         }}
-      >
-        Enter Title here..
-      </h1>
+      ></div>
       <span
         data-gramm="false"
         data-gramm_editor="false"
         data-enable-grammarly="false"
-        className={classes.document}
+        className={styles.document}
         data-text="Enter text here"
         type="textarea"
         value={text}
