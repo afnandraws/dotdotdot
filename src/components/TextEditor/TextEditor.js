@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./TextEditor.module.css";
-import Toolkit from "./Toolkit/Toolkit";
 
 const TextEditor = () => {
   const textRef = useRef();
@@ -9,14 +8,15 @@ const TextEditor = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setText(textRef.current.innerText);
-      console.log(textRef.current.innerText);
     }, 10000);
     return () => clearInterval(interval);
   }, [text]);
 
+  // add the ability to make highlighted text bold
+  // consider using Editor.js
+
   return (
     <div>
-      <Toolkit />
       <div
         data-gramm="false"
         data-gramm_editor="false"
